@@ -1,0 +1,8 @@
+Headers font:
+Heebo
+
+Main font:
+Barlow
+
+Cursive/Hood rat font:
+Shadows into light

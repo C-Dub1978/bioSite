@@ -1,0 +1,95 @@
+/*
+Main Body Backgrounds: #372F18
+Main Nav Background: #ECC5A8
+  - Main Nav Items: #771B0C
+  - Hover Color: #A16B23
+  - Active: #C9341C
+*/
+
+html {
+  background-image: url("images/moab.jpg");
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  font-family: "Shadows Into Light", cursive;
+  font-size: 2em;
+}
+
+.main__nav {
+  vertical-align: middle;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  background-color: #ECC5A8;  
+}
+
+.main__nav-list {
+  list-style: none;  
+  margin: 0;
+  padding: 15px 15px;
+  width: 100%;
+}
+
+.main__nav-list li {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+.main__nav-list a,
+.main__nav-list a:visited {
+  color: #771B0C;
+}
+
+.main__nav-list a:hover {
+  color: #A16B23;
+  text-decoration: underline;
+}
+
+.main__nav-list a:active {
+  color: #C9341C;
+}
+
+.hamburger {
+  float: right;
+  position: relative;
+  right: 25px;
+  width: 35px;
+  height: 35px;
+  vertical-align: middle;
+}
+
+#hamburger {
+  display: none;
+}
+
+.hamburger img {
+  width: 35px;
+  height: 35px;
+}
+
+@media (max-width: 490px) {
+  .main__nav {
+    height: 82px;
+  }
+
+  .main__nav-link {
+    visibility: hidden;
+  }
+
+  #hamburger {
+    display: block;
+    position: relative;
+    bottom: 50px;
+  }
+}
