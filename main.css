@@ -4,26 +4,35 @@ Main Nav Background: #ECC5A8
   - Main Nav Items: #771B0C
   - Hover Color: #A16B23
   - Active: #C9341C
+Main headers: #C9341C
+
 */
 
 html {
-  background-image: url("images/moab.jpg");
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
 
 body {
-  margin: 0;
   padding: 0;
+  margin: 0;
+  background: url("images/moab.jpg") no-repeat;
+  background-attachment:fixed;
 }
 
-a {
-  text-decoration: none;
+h1 {
+  font-family: "Heebo", sans-serif, serif;
+}
+
+h2, h3, h4, h5, h6 {
   font-family: "Shadows Into Light", cursive;
-  font-size: 2em;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 20px;
+  z-index: 100;
 }
 
 .main__nav {
@@ -46,6 +55,12 @@ a {
   margin: 0 20px;
 }
 
+.main__nav-link a {
+  text-decoration: none;
+  font-family: "Shadows Into Light", cursive;
+  font-size: 2em;
+}
+
 .main__nav-list a,
 .main__nav-list a:visited {
   color: #771B0C;
@@ -60,9 +75,101 @@ a {
   color: #C9341C;
 }
 
-@media (max-width: 490px) {
+main {
+  width: 85vw;  
+  margin: 0 auto;
+  position: relative;
+  top: 8em;
+  z-index: 90;
+}
 
-  a {
-    font-size: 1em;
+.about {
+  display: inline-block;
+  width: 100%;
+}
+
+.slogan {
+  text-align: center;
+  color: #ECC5A8;
+  margin: 10px auto;
+  background-color: #771B0C;
+  border-radius: 8px;
+  box-shadow: 2px 2px 1px #ECC5A8;
+  padding: 5px;
+}
+
+.left, .right {
+  background-color: #ECC5A8;
+  border-radius: 8px;
+  color: #C9341C;
+  padding: 5px;
+  margin: 30px 0;
+}
+
+.left {
+  text-align: left;
+  background: -moz-linear-gradient(right, rgba(30,87,153,0) 9%,
+    rgba(30,87,153,0) 12%,
+    rgba(49,97,154,0) 20%, 
+    rgba(236,197,168,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(right, rgba(30,87,153,0) 9%,
+    rgba(30,87,153,0) 12%,
+    rgba(49,97,154,0) 20%,
+    rgba(236,197,168,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to left, rgba(30,87,153,0) 9%,
+    rgba(30,87,153,0) 12%,rgba(49,97,154,0) 20%,
+    rgba(236,197,168,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#001e5799',
+    endColorstr='#ecc5a8',GradientType=1 ); /* IE6-9 */
+}
+
+.right {
+  text-align: right;
+  background: -moz-linear-gradient(left, rgba(30,87,153,0) 9%,
+    rgba(30,87,153,0) 12%,
+    rgba(49,97,154,0) 20%, 
+    rgba(236,197,168,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, rgba(30,87,153,0) 9%,
+    rgba(30,87,153,0) 12%,
+    rgba(49,97,154,0) 20%,
+    rgba(236,197,168,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, rgba(30,87,153,0) 9%,
+    rgba(30,87,153,0) 12%,rgba(49,97,154,0) 20%,
+    rgba(236,197,168,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#001e5799',
+    endColorstr='#ecc5a8',GradientType=1 ); /* IE6-9 */
+}
+
+/** Organisms for main body content sections **/
+
+.right__align-box,
+.left__align-box,
+.center__align-box {
+  margin: 50px 0;
+  width: 85vw;
+  background-color: #372F18;
+  box-shadow: 2px 2px 1px #ECC5A8;
+  border-radius: 8px;
+  display: flex;
+  padding: 10px;
+}
+
+/* .right__align-box {
+  flex-flow: flex-end;
+}
+
+.left__align-box {
+  flex-flow: flex-start;
+}
+
+.center__align-box {
+  flex-flow: center;
+} */
+
+
+
+@media (max-width: 490px) {
+  .main__nav-link a {
+    font-size: 1.3em;
   }
 }
