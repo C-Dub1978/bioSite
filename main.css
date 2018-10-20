@@ -5,6 +5,7 @@ Main Nav Background: #ECC5A8
   - Hover Color: #A16B23
   - Active: #C9341C
 Main headers: #C9341C
+Main section color: #C9341C
 
 */
 
@@ -33,6 +34,20 @@ header {
   width: 100%;
   top: 20px;
   z-index: 100;
+}
+
+footer {
+  width: 100%;
+  font-family: "Shadows Into Light", cursive;
+  font-size: 1.2em;
+  background-color: #ECC5A8;
+  color: #771B0C;
+  margin-top: 180px;
+  padding: 15px;
+}
+
+footer {
+  text-align: center;
 }
 
 .main__nav {
@@ -98,7 +113,7 @@ main {
   padding: 5px;
 }
 
-.left, .right {
+.left, .right, .center {
   background-color: #ECC5A8;
   border-radius: 8px;
   color: #C9341C;
@@ -140,21 +155,31 @@ main {
     endColorstr='#ecc5a8',GradientType=1 ); /* IE6-9 */
 }
 
+.center {
+  text-align: center;
+  background: rgb(247,251,251);
+  background: linear-gradient(90deg, rgba(247,251,251,0) 0%,
+    rgba(236,197,168,1) 50%, rgba(247,251,251,0) 100%);
+}
+
 /** Organisms for main body content sections **/
 
 .right__align-box,
 .left__align-box,
 .center__align-box {
   margin: 50px 0;
-  width: 85vw;
   background-color: #372F18;
   box-shadow: 2px 2px 1px #ECC5A8;
   border-radius: 8px;
   display: flex;
   padding: 10px;
+  height: 300px;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 400;
+  color: #C9341C;
 }
 
-/* .right__align-box {
+.right__align-box {
   flex-flow: flex-end;
 }
 
@@ -164,9 +189,7 @@ main {
 
 .center__align-box {
   flex-flow: center;
-} */
-
-
+}
 
 @media (max-width: 490px) {
   .main__nav-link a {
