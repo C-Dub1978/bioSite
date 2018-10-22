@@ -10,6 +10,6 @@ links.forEach((link) => {
   link.addEventListener('click', () => {
     setTimeout(() => {
       window.scrollTo({}, window.pageYOffset - 200);
-    }, 1);
+    }, 0);
   });
 });
