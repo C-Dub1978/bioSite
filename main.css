@@ -50,7 +50,6 @@ header {
 footer {
   width: 100%;
   font-family: "Heebo", sans-serif, serif;
-  font-size: 1.2em;
   background-color: #ecc5a8;
   color: #771b0c;
   margin-top: 180px;
@@ -123,7 +122,7 @@ main {
   margin: 10px auto;
   background-color: #771b0c;
   border-radius: 8px;
-  box-shadow: 2px 2px 1px #ecc5a8;
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.8);
   padding: 20px;
 }
 
@@ -232,31 +231,41 @@ main {
 .left__align-box,
 .center__align-box {
   margin: 50px 0;
-  background-color: #372f18;
-  box-shadow: 2px 2px 5px #c9341c;
+  background-color: rgba(55, 47, 24, 0.8);
+  box-shadow: 2px 2px 1px rgb(201, 52, 28, 0.25);
   border-radius: 8px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
   display: flex;
-  padding: 10px;
   height: 300px;
   font-family: "Barlow", sans-serif;
   font-weight: 400;
   color: #ecc5a8;
+  padding: 20px;
 }
 
 .right__align-box {
   flex-flow: flex-end;
+  border-top-left-radius: 70px;
+  border-top-right-radius: 0px;
 }
 
 .left__align-box {
   flex-flow: flex-start;
+  border-top-right-radius: 70px;
+  border-top-left-radius: 0px;
 }
 
 .center__align-box {
   flex-flow: center;
 }
 
-@media (max-width: 490px) {
+@media (max-width: 575px) {
   .main__nav-link a {
     font-size: 1.3em;
+  }
+
+  footer {
+    font-size: 0.8em;
   }
 }
