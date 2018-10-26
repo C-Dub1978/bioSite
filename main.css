@@ -32,12 +32,13 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+blockquote {
   font-family: "Shadows Into Light", cursive;
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 1.7em;
 }
 
 header {
@@ -232,32 +233,32 @@ main {
 .center__align-box {
   margin: 50px 0;
   background-color: rgba(55, 47, 24, 0.8);
+  border: -10px inset rgba(236, 197, 168, 1);
   box-shadow: 2px 2px 1px rgb(201, 52, 28, 0.25);
-  border-radius: 8px;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
   display: flex;
-  height: 300px;
+  min-height: 300px;
   font-family: "Barlow", sans-serif;
   font-weight: 400;
   color: #ecc5a8;
-  padding: 20px;
+  padding: 10px;
 }
 
-.right__align-box {
+/* .right__align-box {
   flex-flow: flex-end;
-  border-top-left-radius: 70px;
-  border-top-right-radius: 0px;
 }
 
 .left__align-box {
-  flex-flow: flex-start;
-  border-top-right-radius: 70px;
-  border-top-left-radius: 0px;
+  flex-flow: flex-start;  
 }
 
 .center__align-box {
   flex-flow: center;
+} */
+
+.inner {
+  background-color: rgb(161, 107, 35, 0.8);
+  padding: 8px;
+  border-radius: 8px;
 }
 
 @media (max-width: 575px) {
