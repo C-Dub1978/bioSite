@@ -56,8 +56,7 @@ footer {
 
 .backdrop {
   position: fixed;
-  /*display: none;*/
-  display: flex;
+  display: none;
   flex-flow: column nowrap;
   color: #ecc5a8;
   font-size: 1.8em;
@@ -79,6 +78,24 @@ footer {
 .flex__media-buttons i:hover {
   color: #a16b23;
   cursor: pointer;
+}
+
+.modal__image-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  height: 90%;
+}
+
+.modal__figure {
+  text-align: center;
+  font-size: 0.7em;
+}
+
+.modal__figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .main__nav {
