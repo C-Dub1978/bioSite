@@ -46,21 +46,25 @@ links.forEach(link => {
  * This will build an image container molecule for each object in the images
  * array, and will append it to the images organism on the main page
  */
-imageMaps.forEach(imageObj => {
+imageMaps.forEach((imageObj, index) => {
   // create div container, add class and it's mapped id
   const thumbnail = document.createElement("div");
   thumbnail.classList.add("image__box");
-  thumbnail.id = imageObj.id;
+
   // create the image, set it's attributes, append it to the above div
   const image = document.createElement("img");
   image.setAttribute("src", imageObj.path);
   image.setAttribute("alt", imageObj.id);
   image.setAttribute("width", "100%");
   image.setAttribute("height", "100%");
+  image.setAttribute("id", imageObj.id);
+  image.setAttribute("data-index", index);
   thumbnail.appendChild(image);
+
   // set click listener on the div
   thumbnail.addEventListener("click", e => {
     console.log("clicked: ", e);
+    console.log("data attribute: ", e.target.getAttribute("data-index"));
   });
   // append div to the image container
   imageContainer.append(thumbnail);

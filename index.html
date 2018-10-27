@@ -8,6 +8,10 @@
     <meta name="viewport"
       content="width=device-width, initial-scale=1.0">
     <title>JP Biosite</title>
+    <link rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
+      integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+      crossorigin="anonymous">
     <link rel="shortcut icon"
       href="favicon.png">
     <link href="https://fonts.googleapis.com/css?family=Barlow|Heebo:900
@@ -18,6 +22,25 @@
   </head>
 
   <body>
+
+    <div class="backdrop"
+      id="modal__overlay">
+
+      <div class="flex__media-buttons">
+        <i class="fas fa-chevron-left"
+          id="modal__previous">&nbsp;</i>
+        <i class="fas fa-times"
+          id="modal__close">&nbsp;</i>
+        <i class="fas fa-chevron-right"
+          id="next__modal"
+          id="modal__next">&nbsp;</i>
+      </div>
+
+      <div class="moda__image-container">
+        <!-- full sized images/videos go here -->
+      </div>
+    </div>
+
     <header class="header">
       <nav class="main__nav">
         <ul class="main__nav-list">

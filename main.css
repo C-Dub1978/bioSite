@@ -6,11 +6,13 @@ html {
 body {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
   background: url("images/moab.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -44,16 +46,39 @@ header {
 }
 
 footer {
-  width: 100%;
   font-family: "Heebo", sans-serif, serif;
   background-color: #a16b23;
   color: #771b0c;
   margin-top: 180px;
   padding: 15px;
+  text-align: center;
 }
 
-footer {
-  text-align: center;
+.backdrop {
+  position: fixed;
+  /*display: none;*/
+  display: flex;
+  flex-flow: column nowrap;
+  color: #ecc5a8;
+  font-size: 1.8em;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  width: calc(100% - 20px);
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 15px;
+}
+
+.flex__media-buttons {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.flex__media-buttons i:hover {
+  color: #a16b23;
+  cursor: pointer;
 }
 
 .main__nav {
@@ -99,16 +124,11 @@ footer {
 }
 
 main {
-  width: 85vw;
+  width: 85%;
   margin: 0 auto;
   position: relative;
   top: 8em;
   z-index: 90;
-}
-
-.about {
-  display: inline-block;
-  width: 100%;
 }
 
 .slogan {
@@ -236,7 +256,6 @@ main {
   background-color: rgba(55, 47, 24, 0.8);
   box-shadow: 2px 2px 1px rgba(248, 112, 8, 0.7);
   display: flex;
-  min-height: 300px;
   font-family: "Barlow", sans-serif;
   font-weight: 400;
   color: #ecc5a8;
