@@ -360,14 +360,14 @@ function createMediaImage(mediaObj) {
  */
 function createMediaVideo(urlObj) {
   const container = document.createElement("div");
-  container.style.textAlign = "center";
+  container.setAttribute("class", "aspect__ratio");
   const caption = document.createElement("p");
   caption.style.fontSize = "0.7em";
   caption.innerHTML = urlObj.caption;
   const iframe = document.createElement("iframe");
   iframe.setAttribute("type", "text/html");
-  iframe.setAttribute("width", 702);
-  iframe.setAttribute("height", 405);
+  // iframe.setAttribute("width", 702);
+  // iframe.setAttribute("height", 405);
   iframe.setAttribute(
     "src",
     "https://youtube.com/embed/" + urlObj.id + "?playsinline=0"
