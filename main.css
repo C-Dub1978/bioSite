@@ -290,7 +290,7 @@ main {
 .inner.videos {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   text-align: center;
   width: 100%;
 }
