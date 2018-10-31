@@ -273,6 +273,7 @@ main {
   background-color: rgba(55, 47, 24, 0.8);
   box-shadow: 2px 2px 1px rgba(248, 112, 8, 0.7);
   display: flex;
+  justify-content: center;
   font-family: "Barlow", sans-serif;
   font-weight: 400;
   color: #ecc5a8;
@@ -285,10 +286,13 @@ main {
   border-radius: 8px;
 }
 
-.inner.images {
+.inner.images,
+.inner.videos {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
+  text-align: center;
+  width: 100%;
 }
 
 .image__box {
