@@ -258,7 +258,11 @@ function buildThumbnail(obj, index) {
  * Function attached to the click listener on the modal close button
  */
 function closeModal() {
-  hideElDisplay(document.getElementsByClassName("backdrop")[0]);
+  const backdrop = document.getElementsByClassName("backdrop")[0];
+  console.log("backdrop: ", backdrop);
+  const modalContainer = document.getElementById("modal__image-box");
+  modalContainer.innerHTML = null;
+  hideElDisplay(backdrop);
   currentId = null;
   currentType = null;
 }
