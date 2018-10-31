@@ -4,162 +4,168 @@
  */
 const imageMaps = [
   {
+    caption: "Broken shin on landing",
     id: "broken_stoked",
     path: "images/broken_stoked.jpg",
-    caption: "Broken shin on landing",
     type: "image"
   },
   {
+    caption: "Gearing up for the ballet",
     id: "leotard_gear_up",
     path: "images/leotard_gear_up.jpg",
-    caption: "Gearing up for the ballet",
     type: "image"
   },
   {
+    caption: "Lined up and ready",
     id: "leotard_lineup",
     path: "images/leotard_lineup.jpg",
-    caption: "Lined up and ready",
     type: "image"
   },
   {
+    caption: "Like a true badass",
     id: "leotard",
     path: "images/leotard.jpg",
-    caption: "Like a true badass",
     type: "image"
   },
   {
+    caption: "Being PCA'ed",
     id: "pca_leotard",
     path: "images/pca_leotard.jpg",
-    caption: "Being PCA'ed",
     type: "image"
   },
   {
+    caption: "Landing With Style",
     id: "landing",
     path: "images/landing.jpg",
-    caption: "Landing With Style",
     type: "image"
   },
   {
+    caption: "Exiting Perrine Bridge",
     id: "perrine_exit",
     path: "images/perrine_exit.jpg",
-    caption: "Exiting Perrine Bridge",
     type: "image"
   },
   {
+    caption: "The TARD-over",
     id: "tard_over",
     path: "images/tard_over.jpg",
-    caption: "The TARD-over",
     type: "image"
   },
   {
+    caption: "Turbine fun!",
     id: "turbine",
     path: "images/turbine.jpg",
-    caption: "Turbine fun!",
     type: "image"
   },
   {
+    caption: "AFF Training",
     id: "aff",
     path: "images/aff.jpg",
-    caption: "AFF Training",
     type: "image"
   },
   {
+    caption: "3-way Horny Gorilla Exit",
     id: "gorilla",
     path: "images/gorilla.jpg",
-    caption: "3-way Horny Gorilla Exit",
     type: "image"
   },
   {
+    caption: "Exit Time",
     id: "skydive_exit",
     path: "images/skydive_exit.jpg",
-    caption: "Exit Time",
     type: "image"
   },
   {
+    caption: "Wingsuit Fun",
     id: "wingsuit",
     path: "images/wingsuit.jpg",
-    caption: "Wingsuit Fun",
     type: "image"
   },
   {
+    caption: "High on Rock",
     id: "rock_climbing1",
     path: "images/rock_climbing1.jpg",
-    caption: "High on Rock",
     type: "image"
   },
   {
+    caption: "High on Rock Again",
     id: "rock_climbing2",
     path: "images/rock_climbing2.jpg",
-    caption: "High on Rock Again",
     type: "image"
   },
   {
+    caption: "Shred The Gnar",
     id: "snowboard",
     path: "images/snowboard.jpg",
-    caption: "Shred The Gnar",
     type: "image"
   },
   {
+    caption: "Wakeboard Stoke",
     id: "wakeboarding1",
     path: "images/wakeboarding1.jpg",
-    caption: "Wakeboard Stoke",
     type: "image"
   },
   {
+    caption: "More Wakeboard Stoke",
     id: "wakeboarding2",
     path: "images/wakeboarding2.jpg",
-    caption: "More Wakeboard Stoke",
     type: "image"
   }
 ];
 
+/**
+ * Array containing video objects for the videos container, to build our video
+ * thumbnail molecules
+ */
 const videoMaps = [
   {
+    caption: "Index, WA",
     id: "8sF3fsE9348",
     path: "https://img.youtube.com/vi/8sF3fsE9348/0.jpg",
-    caption: "Index, WA",
     type: "video"
   },
   {
+    caption: "Mt. Baring, WA",
     id: "un5GWCWl73s",
     path: "https://img.youtube.com/vi/un5GWCWl73s/0.jpg",
-    caption: "Mt. Baring, WA",
     type: "video"
   },
   {
+    caption: "Perrine Bride, ID",
     id: "Unzh49DBT_o",
     path: "https://img.youtube.com/vi/Unzh49DBT_o/0.jpg",
-    caption: "Perrine Bride, ID",
     type: "video"
   },
   {
+    caption: "Perrine Bridge, ID",
     id: "JNyPjokRr4g",
     path: "https://img.youtube.com/vi/JNyPjokRr4g/0.jpg",
-    caption: "Perrine Bridge, ID",
     type: "video"
   },
   {
+    caption: "Hoffstadt Bridge, WA",
     id: "vDGA4BFh8eQ",
     path: "https://img.youtube.com/vi/vDGA4BFh8eQ/0.jpg",
-    caption: "Hoffstadt Bridge, WA",
     type: "video"
   },
   {
+    caption: "Moab Sessions, Moab UT",
     id: "oK6OyZi8rJs",
     path: "https://img.youtube.com/vi/oK6OyZi8rJs/0.jpg",
-    caption: "Moab Sessions, Moab UT",
     type: "video"
   },
   {
+    caption: "Crown Point, OR",
     id: "0V_ipYS-vjc",
     path: "https://img.youtube.com/vi/0V_ipYS-vjc/0.jpg",
-    caption: "Crown Point, OR",
     type: "video"
   }
 ];
 
 // Global id number used for the modal
 let currentId = null;
+// Global media type used for the modal
+let currentType = null;
 // DOM objects
 const links = document.querySelectorAll("a");
 const modalClose = document.getElementById("modal__close");
@@ -197,6 +203,10 @@ imageMaps.forEach((imageObj, index) => {
   imageContainer.append(thumbnail);
 });
 
+/**
+ * This will build a video container molecule for each object in the images
+ * array, and will append it to the images organism on the main page
+ */
 videoMaps.forEach((videoObj, index) => {
   // append div to the video container
   const thumbnail = buildThumbnail(videoObj, index);
@@ -204,6 +214,17 @@ videoMaps.forEach((videoObj, index) => {
 });
 
 // HELPER FUNCTIONS
+
+/**
+ * This is a function that builds an image molecule for either the image
+ * container organism or the video container organism
+ * @param {*} obj
+ *      The media object coming from either the image or video array
+ * @param {*} index
+ *      The index position of the media object in it's corresponding array
+ * @returns
+ *      The thumbnail molecule
+ */
 function buildThumbnail(obj, index) {
   let alt;
   if (obj.type === "image") {
@@ -211,7 +232,7 @@ function buildThumbnail(obj, index) {
   } else if (obj.type === "video") {
     alt = obj.caption;
   }
-  // create div container, add class and it's mapped id
+  // create div container, add class
   const thumbnail = document.createElement("div");
   thumbnail.classList.add("image__box");
 
@@ -233,24 +254,34 @@ function buildThumbnail(obj, index) {
   return thumbnail;
 }
 
+/**
+ * Function attached to the click listener on the modal close button
+ */
 function closeModal() {
   hideElDisplay(document.getElementsByClassName("backdrop")[0]);
   currentId = null;
+  currentType = null;
 }
 
+/**
+ * Function attached to the click listener on the modal right/next button
+ */
 function nextModal() {
   currentId++;
   updateModal(currentId);
 }
 
+/**
+ * Function attached to the click listener on the modal left/previous button
+ */
 function previousModal() {
   currentId--;
   updateModal(currentId);
 }
 
 /**
- * Click listener callback, opens the modal when a user clicks an image in the
- * main image container organism
+ * Click listener callback, opens the modal when a user clicks an image
+ * or a video in the main image or video container organisms
  * @param {} el
  *      The html element that was clicked
  */
@@ -261,6 +292,7 @@ function openModal(el) {
   const type = el.getAttribute("data-type");
   const id = el.getAttribute("data-index");
   currentId = id;
+  currentType = type;
   // Check the index to see whether or not to disable modal arrow
   modalArrowsCheck(id);
   insertModalContent(currentId, type);
@@ -297,7 +329,7 @@ function insertModalContent(id, type) {
 function updateModal(id) {
   const container = document.getElementById("modal__image-box");
   container.innerHTML = null;
-  insertModalContent(id, "image");
+  insertModalContent(id, currentType);
 }
 
 /**
@@ -318,17 +350,32 @@ function createMediaImage(mediaObj) {
   return fig;
 }
 
+/**
+ * Function that creates a youtube video iframe and caption to append to
+ * the modal
+ * @param {*} mediaObj
+ *      The object in the imageMap array
+ * @returns container
+ *      The div organism that houses the iframe youtube video
+ */
 function createMediaVideo(urlObj) {
+  const container = document.createElement("div");
+  container.style.textAlign = "center";
+  const caption = document.createElement("p");
+  caption.style.fontSize = "0.7em";
+  caption.innerHTML = urlObj.caption;
   const iframe = document.createElement("iframe");
   iframe.setAttribute("type", "text/html");
   iframe.setAttribute("width", 702);
   iframe.setAttribute("height", 405);
   iframe.setAttribute(
     "src",
-    "https://youtube.com/embed/" + urlObj.path + "?playsinline=0"
+    "https://youtube.com/embed/" + urlObj.id + "?playsinline=0"
   );
   iframe.setAttribute("frameborder", 0);
-  return iframe;
+  container.appendChild(iframe);
+  container.appendChild(caption);
+  return container;
 }
 
 /**
@@ -337,7 +384,6 @@ function createMediaVideo(urlObj) {
  *      The html element to hide
  */
 function hideElVis(el) {
-  console.log("element to hide vis: ", el);
   el.style.visibility = "hidden";
 }
 
@@ -371,19 +417,25 @@ function hideElDisplay(el) {
 }
 
 /**
- * This function checks the global currentId value to see if it is the first
- * or last object in the array, and if so, it hides the previous or next arrow
+ * This function checks the global currentId value and current media type
+ * to see if it is the first or last object in the corresponding
+ * array, and if so, it hides the previous or next arrow
  * @param {*} id
  *      The global id of the current media object
  */
 function modalArrowsCheck(id) {
-  console.log("checking arrow id: ", id);
+  let mapType;
+  if (currentType === "image") {
+    mapType = imageMaps;
+  } else if (currentType === "video") {
+    mapType = videoMaps;
+  }
   const leftArrow = document.getElementById("modal__previous");
   const rightArrow = document.getElementById("modal__next");
   const parsedId = parseInt(id);
   if (parsedId === 0) {
     hideElVis(leftArrow);
-  } else if (parsedId === imageMaps.length - 1) {
+  } else if (parsedId === mapType.length - 1) {
     hideElVis(rightArrow);
   } else {
     showElVis(leftArrow);
