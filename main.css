@@ -331,6 +331,14 @@ main {
   object-fit: contain;
 }
 
+.noscript__img {
+  max-width: 100px;
+  height: 100px;
+  width: 100px;
+  min-width: 60px;
+  min-height: 60px;
+}
+
 @media (max-width: 575px) {
   .main__nav-link a {
     font-size: 1.3em;

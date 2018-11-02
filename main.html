@@ -18,10 +18,28 @@
       rel="stylesheet">
     <link rel="stylesheet"
       href="main.css">
-    <script>window.location.href = "main.html"</script>
+    <noscript>Your browser does not support js</noscript>
   </head>
 
   <body>
+
+    <div class="backdrop"
+      id="modal__overlay">
+
+      <div class="flex__media-buttons">
+        <i class="fas fa-chevron-left"
+          id="modal__previous">&nbsp;</i>
+        <i class="fas fa-times"
+          id="modal__close">&nbsp;</i>
+        <i class="fas fa-chevron-right"
+          id="modal__next">&nbsp;</i>
+      </div>
+
+      <div class="modal__image-container"
+        id="modal__image-box">
+        <!-- full sized images/videos go here -->
+      </div>
+    </div>
 
     <header class="header">
       <nav class="main__nav">
@@ -34,7 +52,6 @@
     </header>
 
     <main>
-      <h1>This Site is Best Viewed With Javascript Enabled...</h1>
       <h1 class="center">Introducing J.P. Stutjick</h1>
 
       <div class="slogan">
@@ -110,171 +127,6 @@
         <div class="inner images"
           id="images__innerbox">
           <h3>Sick Images...</h3>
-
-          <div class="image__box">
-            <a href="images/broken_stoked.jpg"
-              target="blank">
-              <img class="noscript__img"
-                src="images/broken_stoked.jpg"
-                alt="broken">
-            </a>
-          </div>
-
-          <div class="image__box">
-            <a href="images/leotard_gear_up.jpg"
-              target="blank"
-              width="100%"
-              height="100%">
-              <img class="noscript__img"
-                src="images/leotard_gear_up.jpg"
-                alt="leaotard gear up">
-            </a>
-          </div>
-
-          <div class="image__box">
-            <a href="images/leotard_lineup.jpg"
-              target="blank">
-              <img class="noscript__img"
-                src="images/leotard_lineup.jpg"
-                alt="leotard lineup">
-            </a>
-          </div>
-
-          <div class="image__box">
-            <a href="images/leotard.jpg"
-              target="blank">
-              <img class="noscript__img"
-                src="images/leotard.jpg"
-                alt="leotard">
-            </a>
-          </div>
-
-          <div class="image__box">
-            <a href="images/pca_leotard.jpg"
-              target="blank">
-              <img class="noscript__img"
-                src="images/pca_leotard.jpg"
-                alt="pca with leotard">
-            </a>
-          </div>
-
-          <div class="image__box">
-            <a href="images/landing.jpg"
-              target="blank">
-              <img class="noscript__img"
-                src="images/landing.jpg"
-                alt="landing">
-            </a>
-          </div>
-
-          <div class="image__box">
-            <a href="images/perrine_exit.jpg"
-              target="blank">
-              <img class="noscript__img"
-                src="images/perrine_exit.jpg"
-                alt="perrine exit">
-            </a>
-          </div>
-
-          <div class="image__box">
-            <a href="images/tard_over.jpg"
-              target="blank">
-              <img class="noscript__img"
-                src="images/tard_over.jpg"
-                alt="TARD over">
-            </a>
-          </div>
-
-          <div class="image__box">
-            <a href="images/turbine.jpg"
-              target="blank">
-              <img class="noscript__img"
-                src="images/turbine.jpg"
-                alt="turbine fun">
-            </a>
-          </div>
-
-          <div class="image__box">
-            <a href="images/aff.jpg"
-              target="blank">
-              <img class="noscript__img"
-                src="images/aff.jpg"
-                alt="AFF training">
-            </a>
-          </div>
-
-          <div class="image__box">
-            <a href="images/gorilla.jpg"
-              target="blank">
-              <img class="noscript__img"
-                src="images/gorilla.jpg"
-                alt="horny gorilla exit">
-            </a>
-          </div>
-
-          <div class="image__box">
-            <a href="images/skydive_exit.jpg"
-              target="blank">
-              <img class="noscript__img"
-                src="images/skydive_exit.jpg"
-                alt="skydiving exit">
-            </a>
-          </div>
-
-          <div class="image__box">
-            <a href="images/wingsuit.jpg"
-              target="blank">
-              <img class="noscript__img"
-                src="images/wingsuit.jpg"
-                alt="wingsuit fun">
-            </a>
-          </div>
-
-          <div class="image__box">
-            <a href="images/rock_climbing1.jpg"
-              target="blank">
-              <img class="noscript__img"
-                src="images/rock_climbing1.jpg"
-                alt="high on rock">
-            </a>
-          </div>
-
-          <div class="image__box">
-            <a href="images/rock_climbing2.jpg"
-              target="blank">
-              <img class="noscript__img"
-                src="images/rock_climbing2.jpg"
-                alt="high on rock again">
-            </a>
-          </div>
-
-          <div class="image__box">
-            <a href="images/snowboard.jpg"
-              target="blank">
-              <img class="noscript__img"
-                src="images/snowboard.jpg"
-                alt="shred the gnar">
-            </a>
-          </div>
-
-          <div class="image__box">
-            <a href="images/wakeboarding1.jpg"
-              target="blank">
-              <img class="noscript__img"
-                src="images/wakeboarding1.jpg"
-                alt="wakeboard fun">
-            </a>
-          </div>
-
-          <div class="image__box">
-            <a href="images/wakeboarding2.jpg"
-              target="blank">
-              <img class="noscript__img"
-                src="images/wakeboarding2.jpg"
-                alt="more wakeboarding">
-            </a>
-          </div>
-
         </div>
       </section>
 
@@ -299,6 +151,7 @@
         +303-555-1212<br>
       </address>
     </footer>
+    <script src="main.js"></script>
   </body>
 
 </html>
