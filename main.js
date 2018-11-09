@@ -1,4 +1,10 @@
 /**
+ * BioSite project for Web200 @ Bellevue University
+ * author: Christopher Wilson
+ * cswilson.site
+ */
+
+/**
  * Array containing image objects for the images container, to build our image
  * thumbnail molecules
  */

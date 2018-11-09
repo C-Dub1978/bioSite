@@ -120,6 +120,8 @@ footer {
   display: inline-block;
   width: 100%;
   background-color: #a16b23;
+  border: 3px inset #c9341c;
+  margin-left: 2px;
 }
 
 .main__nav-list {
