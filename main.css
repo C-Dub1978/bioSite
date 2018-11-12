@@ -198,6 +198,7 @@ main {
   border-radius: 90px;
   box-shadow: 1px 1px 10px #ecc5a8;
   flex-basis: 165px;
+  object-fit: contain;
 }
 
 .slogan__img.second {
@@ -314,9 +315,9 @@ main {
 }
 
 .image__box {
-  max-width: 100px;
-  height: 100px;
-  width: 100px;
+  max-width: 120px;
+  height: 120px;
+  width: 120px;
   min-width: 60px;
   min-height: 60px;
   border: 1px solid rgba(248, 112, 8, 0.7);
